@@ -34,14 +34,25 @@ aside {
 .user {
     display: flex;
     justify-content: space-between;
-    
+    padding: 5px;
     background: #eeeeee;    
 }
+
+.user .main-user {
+    display: flex;
+    align-items: center;
+} 
 
 .image {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
 }
 
 .icons i{
@@ -50,9 +61,10 @@ aside {
    font-size: 15px;
 }
 
+/* Notifice */
 .notification {
     background: #63E1F4;
-    padding: 15px;
+    padding: 10px;
     display: flex;
 }
 
@@ -70,13 +82,15 @@ aside {
 }
 
 .notifice p {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .notifice a {
-    font-size: 12px;
+    font-size: 11px;
 }
 
+
+/* input search */
 .search {
     background-color: #f7f7f7;
     position: relative;
@@ -103,11 +117,23 @@ aside {
     font-size: 10px;
 }
 
-ul li img {
-    width: 40px;
-    height: 40px;
+
+/* contacts */
+.contacts li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
+.contacts li:hover {
+    background: #cecece;
+}
+
+.contacts p {
+    display: inline-block;
+    margin-left: 10px;
+}
 
 /* CHAT MAIN CONTENT */
 main {
@@ -118,7 +144,6 @@ main {
 
 .sec-header,
 .sec-footer {
-    padding: 20px;
     background: #eeeeee;
     border-left: 1px solid #cece;
 }
@@ -126,9 +151,21 @@ main {
 .sec-header {
     display: flex;
     justify-content: space-between;
-    
+    padding: 5px;    
 }
 
+.chat-user {
+    display: flex;
+    align-items: center;
+}
+
+.chat-user small {
+    display: block;
+    font-size: 10px;
+}
+
+
+/* section chat */
 .sec-content {
     flex-grow: 1;
     overflow-y: auto;
@@ -136,15 +173,20 @@ main {
     background-image: url('./img/mine.jpg');
 } 
 
+
+/* section footer */
 .sec-footer {
     display: flex;
+    justify-content: space-around;
+    padding: 5px;
 }
 
 .sec-footer i {
-    margin: 0 11px;
+   margin: 0 11px;
    color: #777777;
    font-size: 15px;
-  align-self: center;
+   align-self: center;
+   padding: 0px 10px;
 }
 
 .sec-footer input {

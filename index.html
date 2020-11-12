@@ -19,9 +19,10 @@
         <!-- Aside -->
         <aside>
             <div class='user' v-model='user'>
-                <img class='image' :src="'./img/avatar'+ user.avatar +'.jpg'" alt="">
-                <span>{{user.name}}</span>
-                
+                <div class='main-user'>
+                    <img class='image' :src="'./img/avatar'+ user.avatar +'.jpg'" alt="">
+                    <span>{{user.name}}</span>
+                </div>
                 <div class='icons'>
                     <i class="fas fa-circle-notch"></i>
                     <i class="fas fa-comment-alt"></i>
@@ -45,7 +46,7 @@
             </div>
              
 
-            <ul>
+            <ul class='contacts'>
                 <li v-for='(contacts, index) in contacts'>
                     <img class='image ':src="'./img/avatar' + contacts.avatar + '.jpg'" alt="">
                     <p>{{contacts.name}}</p>
@@ -56,16 +57,27 @@
 
         <!-- Chat -->
         <main>
+            <!-- Section Header -->
             <section class='sec-header' v-model='contacts'>
-                <img class='image' src="./img/avatar_1.jpg" alt="">
-                <p>{{contacts.name}}</p>
+                <div class='chat-user'>
+                    <img class='image' src="./img/avatar_1.jpg" alt="">
+                    <p>Michele
+                        <small>Ultimo accesso oggi alle 10.35</small>
+                    </p>
+                    
+                </div>
+
                 <div class='icons'>
                     <i class="fas fa-search"></i>
                     <i class="fas fa-paperclip"></i>
                     <i class="fas fa-ellipsis-v"></i>
                 </div>   
             </section>
+
+            <!-- Section chat -->
             <section class='sec-content'></section>
+
+            <!-- Section footer -->
             <section class='sec-footer'>
                 <i class="far fa-smile"></i>
                 <input type="text" placeholder="Scrivi un messaggio">
