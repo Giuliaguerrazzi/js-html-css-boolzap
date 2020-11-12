@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+    <title>Boolzap</title>
+</head>
+<body>
+    
+    <div id='app' class='container'>
+
+        <!-- Aside -->
+        <aside>
+            <div class='user'>Nome Utente
+                <div class='icons'>
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>                
+            </div>
+            
+
+            <div class='notification'>
+
+                <i class="fas fa-bell-slash"></i>
+                <div class='notifice'>            
+                    <p>Ricevi notifiche di nuovi messaggi</p>
+                    <a href="#">Attiva notifiche dekstop</a>
+                </div> 
+            </div>
+
+            <div class='search'>
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder='Cerca o inizia una nuova chat'>
+            </div>
+             
+
+            <ul>
+                <li></li>
+            </ul>
+
+        </aside>
+
+        <!-- Chat -->
+        <main>
+            <section class='sec-header'>
+                Michele
+                <div class='icons'>
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>   
+            </section>
+            <section class='sec-content'></section>
+            <section class='sec-footer'>
+                <i class="far fa-smile"></i>
+                <input type="text" placeholder="Scrivi un messaggio">
+                <i class="fas fa-microphone"></i>
+            </section>
+        </main>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
