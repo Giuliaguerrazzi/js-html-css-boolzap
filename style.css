@@ -34,8 +34,14 @@ aside {
 .user {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    
     background: #eeeeee;    
+}
+
+.image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 .icons i{
@@ -97,8 +103,13 @@ aside {
     font-size: 10px;
 }
 
+ul li img {
+    width: 40px;
+    height: 40px;
+}
 
-/* MAIN CONTENT */
+
+/* CHAT MAIN CONTENT */
 main {
     flex-basis: 65%;
     display: flex;

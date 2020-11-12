@@ -18,7 +18,10 @@
 
         <!-- Aside -->
         <aside>
-            <div class='user'>Nome Utente
+            <div class='user' v-model='user'>
+                <img class='image' :src="'./img/avatar'+ user.avatar +'.jpg'" alt="">
+                <span>{{user.name}}</span>
+                
                 <div class='icons'>
                     <i class="fas fa-circle-notch"></i>
                     <i class="fas fa-comment-alt"></i>
@@ -43,15 +46,19 @@
              
 
             <ul>
-                <li></li>
+                <li v-for='(contacts, index) in contacts'>
+                    <img class='image ':src="'./img/avatar' + contacts.avatar + '.jpg'" alt="">
+                    <p>{{contacts.name}}</p>
+                </li>
             </ul>
 
         </aside>
 
         <!-- Chat -->
         <main>
-            <section class='sec-header'>
-                Michele
+            <section class='sec-header' v-model='contacts'>
+                <img class='image' src="./img/avatar_1.jpg" alt="">
+                <p>{{contacts.name}}</p>
                 <div class='icons'>
                     <i class="fas fa-search"></i>
                     <i class="fas fa-paperclip"></i>
