@@ -47,7 +47,7 @@
              
 
             <ul class='contacts'>
-                <li v-for='(contacts, index) in contacts'>
+                <li @click="openChat(index)" v-for='(contacts, index) in contacts'>
                     <img class='image ':src="'./img/avatar' + contacts.avatar + '.jpg'" alt="">
                     <p>{{contacts.name}}</p>
                 </li>
@@ -60,10 +60,9 @@
             <!-- Section Header -->
             <section class='sec-header' v-model='contacts'>
                 <div class='chat-user'>
-                    <img class='image' src="./img/avatar_1.jpg" alt="">
-                    <p>Michele
-                        <small>Ultimo accesso oggi alle 10.35</small>
-                    </p>
+                
+                    <small>Ultimo accesso oggi alle 10.35</small>
+                    
                     
                 </div>
 
@@ -76,7 +75,7 @@
 
             <!-- Section chat -->
             <section class='sec-content'>
-                <div class='container-chat'>
+                <div class='container-chat' v-for='message in contacts[contactActive].messages'>
                     <div class='sent'>
                         ciao
                     </div>
