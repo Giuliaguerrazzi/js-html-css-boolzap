@@ -61,7 +61,7 @@
             <!-- Section Header -->
             <section class='sec-header' v-model='contacts'>
                 <div class='chat-user'>
-                    <img :src="`./img/avatar${contacts[contactActive].avatar}.jpg`" alt="">
+                    <img class='image' :src="`./img/avatar${contacts[contactActive].avatar}.jpg`" alt="">
                     <div class="user-name">
                         <p>
                             {{contacts[contactActive].name}}
@@ -80,13 +80,18 @@
             <!-- Section chat -->
             <section class='sec-content'>
                 <div class='container-chat' v-for='message in contacts[contactActive].messages'>
-                    <div class='sent'>
+
+                    <div :class="message.status == 'sent' ? 'received' : 'sent'">
+
+                        {{message.message}}
+                    </div>
+                    <!-- <div class='sent'>
                         ciao
                     </div>
     
                     <div class='received'>
                         ciao
-                    </div>
+                    </div> -->
                 </div>
 
                 

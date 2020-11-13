@@ -180,7 +180,7 @@ main {
 
 .sent,
 .received {
-    max-width: 300px;
+    width: 35%;
     padding: 10px 10px;
     margin-bottom: 10px;
     border-radius: 10px;
