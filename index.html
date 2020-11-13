@@ -82,16 +82,10 @@
                 <div class='container-chat' v-for='message in contacts[contactActive].messages'>
 
                     <div :class="message.status == 'sent' ? 'received' : 'sent'">
-
                         {{message.message}}
+                        {{message.date}}
                     </div>
-                    <!-- <div class='sent'>
-                        ciao
-                    </div>
-    
-                    <div class='received'>
-                        ciao
-                    </div> -->
+                    
                 </div>
 
                 
