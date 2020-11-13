@@ -173,6 +173,30 @@ main {
     background-image: url('./img/mine.jpg');
 } 
 
+.container-chat {
+    display: flex;
+    flex-direction: column;
+}
+
+.sent,
+.received {
+    max-width: 300px;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.sent {
+    margin-right: 50px;
+    background-color: #cbfbb3;    
+    align-self: flex-end;
+}
+.received {
+    margin-left: 50px;
+    background-color: #ffffff;
+    align-self: flex-start;
+}
+
 
 /* section footer */
 .sec-footer {
