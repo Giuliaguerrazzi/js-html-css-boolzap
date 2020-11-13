@@ -10,8 +10,6 @@ var app = new Vue({
             avatar: '_io'
         },
 
-        contactActive: 0,
-
         // Elenco contatti
         contacts: [
             {
@@ -97,14 +95,13 @@ var app = new Vue({
                     }
                 ],
             },
-        ]
+        ],
+
+        contactActive: 0,
 
     },
     methods: {
-       openChat(index) {
-           this.contactActive = index;
-       }
+        
     }
-
     
 });
