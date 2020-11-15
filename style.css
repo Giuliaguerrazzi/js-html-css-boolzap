@@ -150,13 +150,18 @@ main {
 
 .sec-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;    
     padding: 5px;    
 }
 
 .chat-user {
     display: flex;
-    align-items: center;
+}
+
+.user-name {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .chat-user small {
@@ -181,7 +186,7 @@ main {
 .sent,
 .received {
     width: 35%;
-    padding: 10px 10px;
+    padding: 5px 10px;
     margin-bottom: 10px;
     border-radius: 10px;
 }
@@ -191,10 +196,27 @@ main {
     background-color: #cbfbb3;    
     align-self: flex-end;
 }
+
 .received {
     margin-left: 50px;
     background-color: #ffffff;
     align-self: flex-start;
+}
+
+
+.container-chat small {
+    color: #b7b7b7; 
+    font-size: 8px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4px;
+    align-items: flex-end;
+}
+
+.container-chat p {
+    font-size: 12px;
+    margin: 5px 0;
+    align-self: center;
 }
 
 

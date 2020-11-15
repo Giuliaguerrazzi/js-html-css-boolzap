@@ -68,8 +68,8 @@
                             <small>Ultimo accesso oggi alle 10.35</small>
                         </p>
                     
+                    </div>
                 </div>
-
                 <div class='icons'>
                     <i class="fas fa-search"></i>
                     <i class="fas fa-paperclip"></i>
@@ -79,16 +79,15 @@
 
             <!-- Section chat -->
             <section class='sec-content'>
+
                 <div class='container-chat' v-for='message in contacts[contactActive].messages'>
 
-                    <div :class="message.status == 'sent' ? 'received' : 'sent'">
-                        {{message.message}}
-                        {{message.date}}
+                    <div :class="message.status == 'sent' ? 'sent' : 'received'" class="text-chat">
+                        <p>{{message.message}}</p>
+                        <small>{{message.date}}</small>
                     </div>
                     
-                </div>
-
-                
+                </div>                
 
             </section>
 
