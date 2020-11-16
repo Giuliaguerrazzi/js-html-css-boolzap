@@ -108,8 +108,9 @@ var app = new Vue({
                 this.contacts[index].messages.push({
 
                     message: this.newMessage,
-                    date: '10/01/2020 15:50:00',
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     status: 'sent'
+
                 });
 
                 this.newMessage = '';
