@@ -113,10 +113,22 @@ var app = new Vue({
 
                 });
 
+                setTimeout(() => {
+                    this.answerContact(index)
+                }, 1000);
+
                 this.newMessage = '';
             }
             
         },
+
+        answerContact(index){
+            this.contacts[index].messages.push({
+                message: 'ok',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                status: 'received'
+            });
+        }
     
     }
     
