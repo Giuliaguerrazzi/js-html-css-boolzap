@@ -18,7 +18,7 @@
 
         <!-- Aside -->
         <aside>
-            <div class='user' v-model='user'>
+            <div class='user' >
                 <div class='main-user'>
                     <img class='image' :src="'./img/avatar'+ user.avatar +'.jpg'" alt="">
                     <span>{{user.name}}</span>
@@ -59,7 +59,7 @@
         <!-- Chat -->
         <main>
             <!-- Section Header -->
-            <section class='sec-header' v-model='contacts'>
+            <section class='sec-header' >
                 <div class='chat-user'>
                     <img class='image' :src="`./img/avatar${contacts[contactActive].avatar}.jpg`" alt="">
                     <div class="user-name">
@@ -82,7 +82,7 @@
 
                 <div class='container-chat' v-for='message in contacts[contactActive].messages'>
 
-                    <div :class="message.status == 'sent' ? 'sent' : 'received'" class="text-chat">
+                    <div :class="['message', message.status] " class="text-chat">
                         <p>{{message.message}}</p>
                         <small>{{message.date}}</small>
                     </div>
@@ -94,7 +94,7 @@
             <!-- Section footer -->
             <section class='sec-footer'>
                 <i class="far fa-smile"></i>
-                <input type="text" placeholder="Scrivi un messaggio">
+                <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addNewMessage(contactActive)">
                 <i class="fas fa-microphone"></i>
             </section>
         </main>
