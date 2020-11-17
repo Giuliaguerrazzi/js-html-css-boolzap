@@ -26,7 +26,7 @@ var app = new Vue({
                         date: '10/01/2020 15:50:00',
                         message: 'Ricordati di dargli da mangiare',
                         status: 'sent'
-                    },
+                    },     
                     {
                         date: '10/01/2020 16:15:22',
                         message: 'Tutto fatto!',
@@ -101,6 +101,8 @@ var app = new Vue({
 
         newMessage: '',
 
+        searchContact: '',
+
     },
     methods: {
         addNewMessage(index) {
@@ -128,8 +130,19 @@ var app = new Vue({
                 date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 status: 'received'
             });
-        }
+        },
+
+        foundContact(){
+           this.contacts.forEach((name) => {
+               if (name.name.toLowerCase().includes(this.searchContact.toLowerCase())) {
+                   name.visible = true;
+               }
+               else {
+                   name.visible = false;
+               }
+            });
     
-    }
+        }
+    }   
     
 });

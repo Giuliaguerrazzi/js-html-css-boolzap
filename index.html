@@ -42,13 +42,17 @@
 
             <div class='search'>
                 <i class="fas fa-search"></i>
-                <input type="text" placeholder='Cerca o inizia una nuova chat'>
+                <input type="text" 
+                placeholder='Cerca o inizia una nuova chat' v-model='searchContact' 
+                @keyup.enter="foundContact">
             </div>
              
 
             <ul class='contacts'>
                 <li @click="contactActive = index" 
-                v-for='(contacts, index) in contacts'>
+                v-for='(contacts, index) in contacts'
+                v-show="contacts.visible">
+
                     <img class='image ':src="'./img/avatar' + contacts.avatar + '.jpg'" alt="">
                     <p>{{contacts.name}}</p>
                 </li>
