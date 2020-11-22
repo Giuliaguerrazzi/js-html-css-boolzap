@@ -44,7 +44,7 @@
                 <i class="fas fa-search"></i>
                 <input type="text" 
                 placeholder='Cerca o inizia una nuova chat' v-model='searchContact' 
-                @keyup.enter="foundContact">
+                @keyup="foundContact">
             </div>
              
 
@@ -69,7 +69,7 @@
                     <div class="user-name">
                         <p>
                             {{contacts[contactActive].name}}
-                            <small>Ultimo accesso oggi alle 10.35</small>
+                            <small v-show="lastDate()" class="small">Ultimo accesso alle {{lastDate()}}</small>
                         </p>
                     
                     </div>
@@ -98,7 +98,9 @@
             <!-- Section footer -->
             <section class='sec-footer'>
                 <i class="far fa-smile"></i>
-                <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addNewMessage(contactActive)">
+                <input type="text" 
+                placeholder="Scrivi un messaggio" v-model="newMessage" 
+                @keyup.enter="addNewMessage(contactActive)">
                 <i class="fas fa-microphone"></i>
             </section>
         </main>

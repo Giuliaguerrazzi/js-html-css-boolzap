@@ -103,6 +103,9 @@ var app = new Vue({
 
         searchContact: '',
 
+        lastAccess: '',
+
+
     },
     methods: {
         addNewMessage(index) {
@@ -142,7 +145,15 @@ var app = new Vue({
                }
             });
     
-        }
+        },      
+
+         lastDate() {
+             userDate = this.contacts[this.contactActive].messages[this.contacts[this.contactActive].messages.length - 1];
+             if (userDate.status ==='received'){
+                 return userDate.date
+             }
+             return null          
+         },
     }   
     
 });
